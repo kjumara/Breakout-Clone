@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://clu8omjtd03nh"]
+
+[ext_resource type="Script" path="res://Scripts/brick.gd" id="1_f6vp5"]
+[ext_resource type="Texture2D" uid="uid://hdjwlxibl0lx" path="res://Assets/Art/bricks/regular-regular/RegularRed.png" id="2_obma5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vru7x"]
+size = Vector2(90, 18)
+
+[node name="Regular_Brick" type="RigidBody2D" groups=["brick"]]
+collision_layer = 4
+collision_mask = 2
+gravity_scale = 0.0
+script = ExtResource("1_f6vp5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_obma5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_vru7x")

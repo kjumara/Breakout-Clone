@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://q0g3kr86pny5"]
+
+[ext_resource type="Script" path="res://Scripts/power_up_spawner.gd" id="1_yogc5"]
+[ext_resource type="AudioStream" uid="uid://gjx70yt3pfh1" path="res://Assets/Audio/power_up_04.ogg" id="2_21jgy"]
+[ext_resource type="AudioStream" uid="uid://bvmjpyqfuiy3t" path="res://Assets/Audio/power_up_02.ogg" id="3_k1rjj"]
+
+[node name="PowerUp_Spawner" type="Node2D"]
+script = ExtResource("1_yogc5")
+
+[node name="Sound1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_21jgy")
+volume_db = -21.204
+
+[node name="Sound2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k1rjj")
+volume_db = -21.204

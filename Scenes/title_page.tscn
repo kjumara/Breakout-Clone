@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://q2dineydk0yc"]
+
+[ext_resource type="Texture2D" uid="uid://kar6hjdmt6fi" path="res://Assets/Art/TitleScreen.png" id="1_enggx"]
+[ext_resource type="Theme" uid="uid://nmr1t753hp6d" path="res://Scripts/button_themetres.tres" id="1_ugh8r"]
+[ext_resource type="Script" path="res://Scripts/title_page.gd" id="1_v17lh"]
+[ext_resource type="FontFile" uid="uid://c0h1utawduqie" path="res://Assets/Other/ARCADECLASSIC.TTF" id="2_dyh0q"]
+[ext_resource type="PackedScene" uid="uid://dqfmib106fiqt" path="res://Scenes/level_1.tscn" id="2_tuvoa"]
+
+[node name="TitlePage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v17lh")
+level_1 = ExtResource("2_tuvoa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleScreen" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(579.5, 340)
+scale = Vector2(1.23646, 1.25185)
+texture = ExtResource("1_enggx")
+
+[node name="Start" type="Button" parent="CanvasLayer/TitleScreen"]
+offset_left = -434.709
+offset_top = 92.6628
+offset_right = -43.7094
+offset_bottom = 202.663
+theme = ExtResource("1_ugh8r")
+theme_override_fonts/font = ExtResource("2_dyh0q")
+theme_override_font_sizes/font_size = 80
+text = "Start"
+
+[node name="Quit" type="Button" parent="CanvasLayer/TitleScreen"]
+offset_left = 204.0
+offset_top = 133.0
+offset_right = 318.0
+offset_bottom = 187.0
+theme = ExtResource("1_ugh8r")
+theme_override_fonts/font = ExtResource("2_dyh0q")
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+
+[connection signal="pressed" from="CanvasLayer/TitleScreen/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/TitleScreen/Quit" to="." method="_on_quit_pressed"]

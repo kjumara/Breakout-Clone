@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpg3bdxpoh4s4"]
+
+[ext_resource type="Script" path="res://Scripts/powerup_reduce_ball_size.gd" id="1_k5bho"]
+[ext_resource type="Texture2D" uid="uid://3t82sbbm543c" path="res://Assets/Art/powerups/HalveBallSize.png" id="2_felxn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_by46n"]
+radius = 17.0
+
+[node name="Powerup_Reduce_Ball_Size" type="Area2D" groups=["powerup"]]
+collision_layer = 16
+script = ExtResource("1_k5bho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_felxn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_by46n")
+
+[connection signal="body_entered" from="." to="." method="_on_paddle_touched"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cumj4fs6dyi2n"]
+
+[ext_resource type="Script" path="res://Scripts/brick.gd" id="1_s0wsa"]
+[ext_resource type="Texture2D" uid="uid://cdyhah8low4sd" path="res://Assets/Art/bricks/small-regular/SmallRegularRed.png" id="2_vlbl5"]
+[ext_resource type="Texture2D" uid="uid://cresncv2h2l2s" path="res://Assets/Art/bricks/small-damaged/SmallDamagedRed.png" id="3_muuk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vru7x"]
+size = Vector2(36, 18)
+
+[node name="Small_Brick" type="RigidBody2D" groups=["brick"]]
+position = Vector2(100, 38)
+collision_layer = 4
+collision_mask = 2
+gravity_scale = 0.0
+script = ExtResource("1_s0wsa")
+img = ExtResource("2_vlbl5")
+damaged_img = ExtResource("3_muuk2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vlbl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_vru7x")

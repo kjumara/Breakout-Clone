@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy1plvgapyr6o"]
+
+[ext_resource type="AudioStream" uid="uid://bpv4s40gc1rdo" path="res://Assets/Audio/breakout_music.ogg" id="1_sqxos"]
+
+[node name="MusicPlayer" type="Node"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_sqxos")
+autoplay = true
+playback_type = 1
+parameters/looping = true

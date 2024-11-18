@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://ei3s7g8yrvgp"]
+
+[ext_resource type="FontFile" uid="uid://c0h1utawduqie" path="res://Assets/Other/ARCADECLASSIC.TTF" id="1_e1cvr"]
+[ext_resource type="Texture2D" uid="uid://dx35smqvtudka" path="res://Assets/Art/ball.png" id="2_khmcv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7t5pq"]
+font = ExtResource("1_e1cvr")
+font_size = 50
+
+[node name="HUD" type="CanvasLayer"]
+layer = 10
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 79.0
+offset_bottom = 18.0
+text = "Balls Left"
+label_settings = SubResource("LabelSettings_7t5pq")
+
+[node name="LIFE1" type="Sprite2D" parent="."]
+position = Vector2(291, 28)
+scale = Vector2(2, 1.947)
+texture = ExtResource("2_khmcv")
+
+[node name="LIFE2" type="Sprite2D" parent="."]
+position = Vector2(346, 28)
+scale = Vector2(2, 1.947)
+texture = ExtResource("2_khmcv")
+
+[node name="LIFE3" type="Sprite2D" parent="."]
+position = Vector2(401, 29)
+scale = Vector2(2, 1.947)
+texture = ExtResource("2_khmcv")

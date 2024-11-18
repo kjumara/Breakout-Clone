@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3cv7kkh3mnmd"]
+
+[ext_resource type="Script" path="res://Scripts/powerup_reduce_paddle_size.gd" id="1_502yy"]
+[ext_resource type="Texture2D" uid="uid://b5b55oyhbkiw2" path="res://Assets/Art/powerups/HalvePaddleSize.png" id="2_wvigj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_by46n"]
+radius = 17.0
+
+[node name="Powerup_Reduce_Paddle_Size" type="Area2D" groups=["powerup"]]
+collision_layer = 16
+script = ExtResource("1_502yy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wvigj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_by46n")
+
+[connection signal="body_entered" from="." to="." method="_on_paddle_touched"]

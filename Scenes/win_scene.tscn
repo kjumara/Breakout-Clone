@@ -1,0 +1,254 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccbonfpebs4e0"]
+
+[ext_resource type="Script" path="res://Scripts/title_page.gd" id="1_fifwk"]
+[ext_resource type="PackedScene" uid="uid://dqfmib106fiqt" path="res://Scenes/level_1.tscn" id="2_mym7s"]
+[ext_resource type="Texture2D" uid="uid://brb7d34gnp8t8" path="res://Assets/Art/backgroundl.png" id="3_qwhny"]
+[ext_resource type="FontFile" uid="uid://c0h1utawduqie" path="res://Assets/Other/ARCADECLASSIC.TTF" id="4_reg8c"]
+[ext_resource type="Theme" uid="uid://nmr1t753hp6d" path="res://Scripts/button_themetres.tres" id="5_b004a"]
+
+[sub_resource type="Curve" id="Curve_06kng"]
+min_value = 2.0
+max_value = 3.0
+_data = [Vector2(0, 2), 0.0, 0.0, 0, 0, Vector2(1, 5), 4.2, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_7brqe"]
+offsets = PackedFloat32Array(0, 0.273973, 0.630137, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.541096, 0.541096, 0.541096, 1, 0.715555, 0.715555, 0.715555, 1, 1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pj560"]
+font = ExtResource("4_reg8c")
+font_size = 300
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 23
+shadow_color = Color(1, 1, 1, 1)
+
+[node name="Win_Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fifwk")
+level_1 = ExtResource("2_mym7s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+offset_left = 818.0
+offset_top = 389.0
+offset_right = 905.0
+offset_bottom = 441.0
+theme = ExtResource("5_b004a")
+theme_override_fonts/font = ExtResource("4_reg8c")
+theme_override_font_sizes/font_size = 30
+text = "Quit
+"
+
+[node name="Fireworks" type="Node2D" parent="CanvasLayer"]
+
+[node name="FireworksParticle2" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(473, 128)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.241809, 0.438388, 0.973353, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle8" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(235, 496)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.237293, 0.000303416, 0.672725, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle3" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(181, 110)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.680372, 0.398924, 0.776651, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle10" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(628, 453)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.585929, 0.106325, 0.575775, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle4" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(879, 124)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.229133, 0.618895, 0.411393, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle5" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(651, 264)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.901961, 0.109804, 0.290196, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle9" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(994, 448)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.996078, 0.364706, 0.631373, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle6" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(55, 328)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.898039, 0.313726, 0.25098, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="FireworksParticle7" type="CPUParticles2D" parent="CanvasLayer/Fireworks"]
+position = Vector2(987, 232)
+amount = 40
+lifetime = 2.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fract_delta = false
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+initial_velocity_min = 300.0
+initial_velocity_max = 500.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_06kng")
+color = Color(0.905882, 0.768627, 0.0980392, 1)
+color_ramp = SubResource("Gradient_7brqe")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -579.0
+offset_top = 4.0
+offset_right = 560.0
+offset_bottom = 308.0
+grow_horizontal = 2
+text = "YOU Win"
+label_settings = SubResource("LabelSettings_pj560")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+z_index = -1000
+position = Vector2(581.5, 314)
+scale = Vector2(1.19896, 1.22963)
+texture = ExtResource("3_qwhny")
+
+[node name="MainMenu" type="Button" parent="CanvasLayer"]
+offset_left = 144.0
+offset_top = 334.0
+offset_right = 422.0
+offset_bottom = 450.0
+theme = ExtResource("5_b004a")
+theme_override_fonts/font = ExtResource("4_reg8c")
+theme_override_font_sizes/font_size = 80
+text = "MENU"
+
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]

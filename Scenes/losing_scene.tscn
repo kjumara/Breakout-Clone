@@ -1,0 +1,154 @@
+[gd_scene load_steps=18 format=3 uid="uid://dimfv1gb4a3sc"]
+
+[ext_resource type="Script" path="res://Scripts/title_page.gd" id="1_52amo"]
+[ext_resource type="PackedScene" uid="uid://dqfmib106fiqt" path="res://Scenes/level_1.tscn" id="2_k3kpn"]
+[ext_resource type="Texture2D" uid="uid://brb7d34gnp8t8" path="res://Assets/Art/backgroundl.png" id="3_a860s"]
+[ext_resource type="FontFile" uid="uid://c0h1utawduqie" path="res://Assets/Other/ARCADECLASSIC.TTF" id="4_qbvdd"]
+[ext_resource type="Texture2D" uid="uid://c6igw24etki2" path="res://Assets/Art/bricks/regular-regular/RegularBlue.png" id="5_3t48w"]
+[ext_resource type="Theme" uid="uid://nmr1t753hp6d" path="res://Scripts/button_themetres.tres" id="5_58lmm"]
+[ext_resource type="Texture2D" uid="uid://bxlrryghxolt5" path="res://Assets/Art/bricks/regular-regular/RegularCyan.png" id="5_gk5l7"]
+[ext_resource type="Texture2D" uid="uid://iwvx3qbix0f2" path="res://Assets/Art/bricks/regular-regular/RegularGreen.png" id="6_kl4fr"]
+[ext_resource type="Texture2D" uid="uid://drdhs8yvc4tjj" path="res://Assets/Art/bricks/regular-regular/RegularOrange.png" id="7_sre1x"]
+[ext_resource type="Texture2D" uid="uid://dfwwl1xs5df3o" path="res://Assets/Art/bricks/regular-regular/RegularPink.png" id="8_ts4l4"]
+[ext_resource type="Texture2D" uid="uid://dj5deld58258e" path="res://Assets/Art/bricks/regular-regular/RegularPurple.png" id="9_7hq0w"]
+[ext_resource type="Texture2D" uid="uid://hdjwlxibl0lx" path="res://Assets/Art/bricks/regular-regular/RegularRed.png" id="10_72h5l"]
+[ext_resource type="Texture2D" uid="uid://b3blb6s5fdbiy" path="res://Assets/Art/bricks/regular-regular/RegularYellow.png" id="11_jdg1x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pj560"]
+font = ExtResource("4_qbvdd")
+font_size = 175
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 23
+shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_v03gr"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_m0gg4"]
+curve = SubResource("Curve_v03gr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8pr70"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(1, 0, 1)
+emission_shape = 3
+emission_box_extents = Vector3(600, 10, 0)
+gravity = Vector3(0, 150, 0)
+linear_accel_curve = SubResource("CurveTexture_m0gg4")
+
+[node name="Loss_Page" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52amo")
+level_1 = ExtResource("2_k3kpn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="CanvasLayer"]
+z_index = -1000
+position = Vector2(586, 346)
+scale = Vector2(1.33646, 1.34815)
+texture = ExtResource("3_a860s")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -398.0
+offset_right = 398.0
+offset_bottom = 203.0
+grow_horizontal = 2
+text = "Try Again"
+label_settings = SubResource("LabelSettings_pj560")
+
+[node name="MainMenu" type="Button" parent="CanvasLayer"]
+offset_left = 144.0
+offset_top = 334.0
+offset_right = 422.0
+offset_bottom = 450.0
+theme = ExtResource("5_58lmm")
+theme_override_fonts/font = ExtResource("4_qbvdd")
+theme_override_font_sizes/font_size = 80
+text = "MENU"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+offset_left = 818.0
+offset_top = 389.0
+offset_right = 905.0
+offset_bottom = 441.0
+theme = ExtResource("5_58lmm")
+theme_override_fonts/font = ExtResource("4_qbvdd")
+theme_override_font_sizes/font_size = 30
+text = "Quit
+"
+
+[node name="FallingBricks" type="Node2D" parent="CanvasLayer"]
+z_index = -100
+position = Vector2(0, -35)
+
+[node name="Blue" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 81)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("5_3t48w")
+lifetime = 5.0
+
+[node name="Cyan" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 81)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("5_gk5l7")
+lifetime = 5.0
+
+[node name="Green" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 81)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("6_kl4fr")
+lifetime = 5.0
+
+[node name="Orange" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 81)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("7_sre1x")
+lifetime = 5.0
+
+[node name="Pink" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 81)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("8_ts4l4")
+lifetime = 5.0
+
+[node name="Purple" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 81)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("9_7hq0w")
+lifetime = 5.0
+
+[node name="Red" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(562, 82)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("10_72h5l")
+lifetime = 5.0
+
+[node name="Yellow" type="GPUParticles2D" parent="CanvasLayer/FallingBricks"]
+position = Vector2(566, 38)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_8pr70")
+texture = ExtResource("11_jdg1x")
+lifetime = 5.0
+
+[connection signal="pressed" from="CanvasLayer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

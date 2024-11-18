@@ -1,0 +1,955 @@
+[gd_scene load_steps=26 format=3 uid="uid://dqfmib106fiqt"]
+
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_2aiv5"]
+[ext_resource type="PackedScene" uid="uid://clu8omjtd03nh" path="res://Scenes/regular_brick.tscn" id="1_u3mu2"]
+[ext_resource type="PackedScene" uid="uid://psb1om4k20km" path="res://Scenes/level_2.tscn" id="2_3xa02"]
+[ext_resource type="Texture2D" uid="uid://c6igw24etki2" path="res://Assets/Art/bricks/regular-regular/RegularBlue.png" id="2_l86ow"]
+[ext_resource type="Texture2D" uid="uid://bqav4jm84l5ny" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedBlue.png" id="3_rxm8h"]
+[ext_resource type="Texture2D" uid="uid://dj5deld58258e" path="res://Assets/Art/bricks/regular-regular/RegularPurple.png" id="4_rpnee"]
+[ext_resource type="Texture2D" uid="uid://bfq142i0g56ri" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedPurple.png" id="5_mxed3"]
+[ext_resource type="Texture2D" uid="uid://bxlrryghxolt5" path="res://Assets/Art/bricks/regular-regular/RegularCyan.png" id="6_88l1s"]
+[ext_resource type="Texture2D" uid="uid://btxskhd47l64j" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedCyan.png" id="7_7odsi"]
+[ext_resource type="Texture2D" uid="uid://dfwwl1xs5df3o" path="res://Assets/Art/bricks/regular-regular/RegularPink.png" id="8_0knrw"]
+[ext_resource type="Texture2D" uid="uid://b8bd0jfysw1wi" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedPink.png" id="9_qm017"]
+[ext_resource type="Texture2D" uid="uid://iwvx3qbix0f2" path="res://Assets/Art/bricks/regular-regular/RegularGreen.png" id="10_14rke"]
+[ext_resource type="Texture2D" uid="uid://dlctyxvmd0wi5" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedGreen.png" id="11_x0ar1"]
+[ext_resource type="Texture2D" uid="uid://b3blb6s5fdbiy" path="res://Assets/Art/bricks/regular-regular/RegularYellow.png" id="12_7arug"]
+[ext_resource type="Texture2D" uid="uid://drdhs8yvc4tjj" path="res://Assets/Art/bricks/regular-regular/RegularOrange.png" id="12_er447"]
+[ext_resource type="PackedScene" uid="uid://cumj4fs6dyi2n" path="res://Scenes/small_brick.tscn" id="12_rej6s"]
+[ext_resource type="Texture2D" uid="uid://btd1dw4of3uj4" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedOrange.png" id="13_1b1ba"]
+[ext_resource type="Texture2D" uid="uid://my6iph5qv7rf" path="res://Assets/Art/bricks/regular-damaged/RegularDamagedYellow.png" id="13_bdtyw"]
+[ext_resource type="Texture2D" uid="uid://byma41cnhhl1q" path="res://Assets/Art/bricks/small-regular/SmallRegularPink.png" id="13_pdck7"]
+[ext_resource type="Texture2D" uid="uid://crw7b10sq1ref" path="res://Assets/Art/bricks/small-damaged/SmallDamagedPink.png" id="14_nfmfx"]
+[ext_resource type="PackedScene" uid="uid://dlievkef4d0ak" path="res://Scenes/paddle.tscn" id="15_wqqhn"]
+[ext_resource type="PackedScene" uid="uid://bong6m2hay26s" path="res://Scenes/ball.tscn" id="16_tw4ik"]
+[ext_resource type="Texture2D" uid="uid://brb7d34gnp8t8" path="res://Assets/Art/backgroundl.png" id="21_a7tv5"]
+[ext_resource type="PackedScene" uid="uid://c3n7aprbanskv" path="res://Scenes/death_zone.tscn" id="22_3g10l"]
+[ext_resource type="PackedScene" uid="uid://ei3s7g8yrvgp" path="res://Scenes/hud.tscn" id="24_hkk4o"]
+
+[node name="Level_1" type="Node2D"]
+position = Vector2(0, 69)
+script = ExtResource("1_2aiv5")
+next_level = ExtResource("2_3xa02")
+
+[node name="Bricks" type="Node2D" parent="."]
+
+[node name="Layer1" type="Node2D" parent="Bricks"]
+
+[node name="Regular_Brick" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+
+[node name="Regular_Brick2" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+
+[node name="Regular_Brick3" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+
+[node name="Regular_Brick4" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+
+[node name="Regular_Brick5" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+
+[node name="Regular_Brick6" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+
+[node name="Regular_Brick7" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+
+[node name="Regular_Brick8" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+
+[node name="Regular_Brick9" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+
+[node name="Regular_Brick10" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+
+[node name="Regular_Brick11" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+
+[node name="Regular_Brick12" parent="Bricks/Layer1" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+
+[node name="Layer2" type="Node2D" parent="Bricks"]
+position = Vector2(0, 20)
+
+[node name="Regular_Brick" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick2" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick3" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick4" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick5" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick6" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick7" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick8" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick9" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick10" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick11" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick12" parent="Bricks/Layer2" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Layer3" type="Node2D" parent="Bricks"]
+position = Vector2(0, 40)
+
+[node name="Regular_Brick" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick2" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick3" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick4" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick5" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick6" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick7" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick8" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick9" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick10" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick11" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Regular_Brick12" parent="Bricks/Layer3" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("4_rpnee")
+damaged_img = ExtResource("5_mxed3")
+
+[node name="Layer4" type="Node2D" parent="Bricks"]
+position = Vector2(0, 60)
+
+[node name="Regular_Brick" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick2" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick3" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick4" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick5" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick6" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick7" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick8" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick9" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick10" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick11" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick12" parent="Bricks/Layer4" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Layer5" type="Node2D" parent="Bricks"]
+position = Vector2(0, 80)
+
+[node name="Regular_Brick" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick2" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick3" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick4" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick5" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick6" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick7" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick8" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick9" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick10" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick11" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick12" parent="Bricks/Layer5" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Layer6" type="Node2D" parent="Bricks"]
+position = Vector2(0, 100)
+
+[node name="Regular_Brick" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick2" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick3" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick4" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick5" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick6" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick7" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick8" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick9" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick10" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick11" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Regular_Brick12" parent="Bricks/Layer6" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+
+[node name="Layer7" type="Node2D" parent="Bricks"]
+position = Vector2(0, 120)
+
+[node name="Regular_Brick" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick2" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick3" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick4" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick5" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick6" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick7" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick8" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick9" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick10" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick11" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick12" parent="Bricks/Layer7" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Layer8" type="Node2D" parent="Bricks"]
+position = Vector2(0, 140)
+
+[node name="Regular_Brick" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick2" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick3" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick4" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick5" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick6" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick7" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick8" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick9" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick10" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick11" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Regular_Brick12" parent="Bricks/Layer8" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("2_l86ow")
+damaged_img = ExtResource("3_rxm8h")
+
+[node name="Layer9" type="Node2D" parent="Bricks"]
+position = Vector2(0, 160)
+
+[node name="Regular_Brick" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+
+[node name="Regular_Brick2" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+
+[node name="Regular_Brick3" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+
+[node name="Regular_Brick4" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+
+[node name="Regular_Brick5" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+
+[node name="Regular_Brick6" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+
+[node name="Regular_Brick7" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+
+[node name="Regular_Brick8" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+
+[node name="Regular_Brick9" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+
+[node name="Regular_Brick10" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+
+[node name="Regular_Brick11" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+
+[node name="Regular_Brick12" parent="Bricks/Layer9" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+
+[node name="Layer10" type="Node2D" parent="Bricks"]
+position = Vector2(0, 180)
+
+[node name="Regular_Brick" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick2" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick3" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick4" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick5" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(432, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick6" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(525, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick7" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(618, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick8" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(711, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick9" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick10" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick11" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Regular_Brick12" parent="Bricks/Layer10" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("6_88l1s")
+damaged_img = ExtResource("7_7odsi")
+
+[node name="Layer11" type="Node2D" parent="Bricks"]
+position = Vector2(0, 200)
+
+[node name="Regular_Brick" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick2" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick3" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick4" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(339, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick9" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(804, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick10" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick11" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Regular_Brick12" parent="Bricks/Layer11" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+
+[node name="Layer12" type="Node2D" parent="Bricks"]
+position = Vector2(0, 220)
+
+[node name="Regular_Brick" parent="Bricks/Layer12" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 16)
+img = ExtResource("12_er447")
+damaged_img = ExtResource("13_1b1ba")
+
+[node name="Regular_Brick2" parent="Bricks/Layer12" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 16)
+img = ExtResource("12_er447")
+damaged_img = ExtResource("13_1b1ba")
+
+[node name="Regular_Brick3" parent="Bricks/Layer12" instance=ExtResource("1_u3mu2")]
+position = Vector2(246, 16)
+img = ExtResource("12_er447")
+damaged_img = ExtResource("13_1b1ba")
+
+[node name="Regular_Brick10" parent="Bricks/Layer12" instance=ExtResource("1_u3mu2")]
+position = Vector2(897, 16)
+img = ExtResource("12_er447")
+damaged_img = ExtResource("13_1b1ba")
+
+[node name="Regular_Brick11" parent="Bricks/Layer12" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 16)
+img = ExtResource("12_er447")
+damaged_img = ExtResource("13_1b1ba")
+
+[node name="Regular_Brick12" parent="Bricks/Layer12" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 16)
+img = ExtResource("12_er447")
+damaged_img = ExtResource("13_1b1ba")
+
+[node name="Layer13" type="Node2D" parent="Bricks"]
+
+[node name="Small_Brick" parent="Bricks/Layer13" instance=ExtResource("12_rej6s")]
+position = Vector2(220, 258)
+
+[node name="Small_Brick2" parent="Bricks/Layer13" instance=ExtResource("12_rej6s")]
+position = Vector2(924, 258)
+
+[node name="Regular_Brick" parent="Bricks/Layer13" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 258)
+is_strong_brick = true
+
+[node name="Regular_Brick2" parent="Bricks/Layer13" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 258)
+is_strong_brick = true
+
+[node name="Regular_Brick3" parent="Bricks/Layer13" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 258)
+is_strong_brick = true
+
+[node name="Regular_Brick4" parent="Bricks/Layer13" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 258)
+is_strong_brick = true
+
+[node name="Layer14" type="Node2D" parent="Bricks"]
+position = Vector2(0, 20)
+
+[node name="Regular_Brick" parent="Bricks/Layer14" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 258)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+is_strong_brick = true
+
+[node name="Regular_Brick2" parent="Bricks/Layer14" instance=ExtResource("1_u3mu2")]
+position = Vector2(153, 258)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Regular_Brick3" parent="Bricks/Layer14" instance=ExtResource("1_u3mu2")]
+position = Vector2(990, 258)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+is_strong_brick = true
+
+[node name="Regular_Brick4" parent="Bricks/Layer14" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 258)
+img = ExtResource("10_14rke")
+damaged_img = ExtResource("11_x0ar1")
+
+[node name="Layer15" type="Node2D" parent="Bricks"]
+position = Vector2(0, 20)
+
+[node name="Small_Brick" parent="Bricks/Layer15" instance=ExtResource("12_rej6s")]
+position = Vector2(126, 279)
+img = ExtResource("13_pdck7")
+damaged_img = ExtResource("14_nfmfx")
+
+[node name="Small_Brick2" parent="Bricks/Layer15" instance=ExtResource("12_rej6s")]
+position = Vector2(1017, 279)
+img = ExtResource("13_pdck7")
+damaged_img = ExtResource("14_nfmfx")
+
+[node name="Regular_Brick" parent="Bricks/Layer15" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 279)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+is_strong_brick = true
+
+[node name="Regular_Brick2" parent="Bricks/Layer15" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 279)
+img = ExtResource("8_0knrw")
+damaged_img = ExtResource("9_qm017")
+is_strong_brick = true
+
+[node name="Layer16" type="Node2D" parent="Bricks"]
+position = Vector2(0, 40)
+
+[node name="Regular_Brick" parent="Bricks/Layer16" instance=ExtResource("1_u3mu2")]
+position = Vector2(60, 279)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+is_strong_brick = true
+
+[node name="Regular_Brick2" parent="Bricks/Layer16" instance=ExtResource("1_u3mu2")]
+position = Vector2(1083, 279)
+img = ExtResource("12_7arug")
+damaged_img = ExtResource("13_bdtyw")
+is_strong_brick = true
+
+[node name="Paddle" parent="." instance=ExtResource("15_wqqhn")]
+position = Vector2(443, 522)
+
+[node name="Ball" parent="." instance=ExtResource("16_tw4ik")]
+position = Vector2(583, 392)
+collision_mask = 13
+
+[node name="BG" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Sprite2D" type="Sprite2D" parent="BG"]
+texture_repeat = 2
+position = Vector2(561, 332.25)
+scale = Vector2(1.4375, 1.37315)
+texture = ExtResource("21_a7tv5")
+
+[node name="DeathZone" parent="." instance=ExtResource("22_3g10l")]
+position = Vector2(510, 688)
+collision_layer = 8
+collision_mask = 2
+
+[node name="HUD" parent="." instance=ExtResource("24_hkk4o")]
+
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer1/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer2/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer3/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer4/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer5/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer6/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer7/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer8/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer9/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick5" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick6" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick7" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick8" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer10/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick9" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer11/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer12/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer12/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer12/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer12/Regular_Brick10" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer12/Regular_Brick11" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer12/Regular_Brick12" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer13/Small_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer13/Small_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer13/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer13/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer13/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer13/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer14/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer14/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer14/Regular_Brick3" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer14/Regular_Brick4" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer15/Small_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer15/Small_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer15/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer15/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer16/Regular_Brick" to="." method="_on_power_up_spawned"]
+[connection signal="power_up_spawned" from="Bricks/Layer16/Regular_Brick2" to="." method="_on_power_up_spawned"]
+[connection signal="area_entered" from="DeathZone" to="." method="_on_death_zone_entered"]
